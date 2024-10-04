@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="card">
+        <div class="imgBox">
+            <img src="https://image.ibb.co/fYzTrb/lastofus.jpg" alt="Birthday Image">
+        </div>
+        <div class="details">
+            <h4 class="color1">Happy Birthday</h4>
+            <h4 class="color2 margin">Dyah Ayu Sri Wulandari</h4>
+            <p>Dear Ndey,</p>
+            <p>You've been 18 this year.</p>
+            <p>Sorry banget kalo gk ngasih hadiah banyak.</p>
+            <p>Jangan sedih trus karna gak bisa balik,</p>
+            <p>Kan masih bisa dirayain disini !!!!</p>
+            <p>I Hope this year will be grateful year for</p>
+            <p>You.</p>
+            <p>______</p>
+            <p>"If One Day You Lose your way</p>
+            <p>Just remember that i'm here to stay</p>
+            <p>Don't you give up, keep your chin up</p>
+            <p>And be Happy :)"</p>
+            <p class="text-right">Happy Birthday, Ndey!</p>
+            <p class="text-right">-Ajis</p>
+        </div>
+    </div>
+
+   <h1>Ndey's Gallery</h1>
+<main>
+	<div id="gallery">
+		<figure>
+			<img src="images/1.png" alt="Pink and blue clouds at sunset. " title="Photo by Jeremy Doddridge for Unsplash">
+			<figcaption>Jelek jir</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="images/3.png" alt="Low angle view up into a sky filled with deep blue clouds. " title="Photo by Matthew Brayer for Unsplash">
+			<figcaption>Chili-Chilian Tangerang</figcaption>
+		</figure>
+		<figure>
+			<img src="images/4.jpg" alt="Heavy gray clouds in the sky. " title="Photo by Simeon Muller for Unsplash">
+			<figcaption>Ndey Imoet</figcaption>
+		</figure>
+		<figure>
+			<img src="images/5.jpg" alt="Deep orange clouds at sunset. " title="Photo by Laura Vinck for Unsplash">
+			<figcaption>Ndey lagi ngoding</figcaption>
+		</figure>
+		<figure>
+			<img src="images/2.png" alt="Clouds in shades of dark blue and magenta at sunset. " title="Photo by Szabo Viktor for Unsplash">
+			<figcaption>Foto sama kembaran</figcaption>
+		</figure>
+		<figure>
+			<img src="images/7.jpg" alt="Clouds in shades of blue and gold at sunrise. " title="Photo by Łukasz Łada for Unsplash">
+			<figcaption>Shock berat</figcaption>
+		</figure>
+		<figure>
+			<img src='images/8.jpg' alt='clouds and sky during daytime' title="Photo by Diego PH for Unsplash">
+			<figcaption>Ukhty Ndey</figcaption>
+		</figure>
+		<figure>
+			<img src="images/9.jpg" alt="white clouds and blue sky. " title="Photo by Carlos Kenobi for Unsplash">
+			<figcaption>Ndey Galau</figcaption>
+		</figure>
+		<figure>
+			<img src="images/10.jpg" alt="cloudy sky. " title="Photo by Alex Machado for Unsplash">
+			<figcaption>Ndey China -_-</figcaption>
+		</figure>
+		<figure>
+			<img src="images/11.jpg" alt="rainbow during daytime. " title="Photo by Yulia Gadalina for Unsplash">
+			<figcaption>Mam eskrim</figcaption>
+		</figure>
+		<figure>
+			<img src="images/12.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+			<figcaption>HBD Ndey</figcaption>
+		</figure>
+		<figure>
+			<img src="images/13.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+			<figcaption>Circle Ndey</figcaption>
+		</figure>
+		<figure>
+			<img src="images/14.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+			<figcaption>Foto Sama Kembaran Jauh</figcaption>
+		</figure>
+		<figure>
+			<img src="images/15.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+			<figcaption>Gugu Gaga</figcaption>
+		</figure>
+	</div>
+</main>
+    
+
+    <audio id="hoverSound">
+        <source src="sound1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="backgroundMusic" loop>
+        <source src="sound2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const hoverSound = document.getElementById('hoverSound');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const card = document.querySelector('.card');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            backgroundMusic.play();
+        });
+
+        card.addEventListener('mouseover', () => {
+            hoverSound.play();
+        });
+
+        card.addEventListener('mouseleave', () => {
+            hoverSound.pause();
+            hoverSound.currentTime = 0;
+        });
+    </script>
+
+    <script>
+        
+"use strict";
+(function () {
+	window.onload = () => {
+		const obj = document.querySelector("#gallery");
+		const time = 10000;
+		function animStart() {
+			if (obj.classList.contains("active") == false) {
+				obj.classList.add("active");
+				setTimeout(() => {
+					animEnd();
+				}, time);
+			}
+		}
+		function animEnd() {
+			obj.classList.remove("active");
+			obj.offsetWidth;
+		}
+		document.addEventListener("scroll", function () {
+			// scroll or scrollend
+			animStart();
+		});
+		window.addEventListener("resize", animStart);
+		animStart();
+	};
+})();
+    </script>
+</body>
+</html>
